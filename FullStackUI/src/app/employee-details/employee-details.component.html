@@ -1,0 +1,47 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-responsive table-hover table-bordered">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Sr. No.</th>
+                        <th>Name</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>DOB</th>
+                        <th>DOJ</th>
+                        <th>Department</th>
+                        <th>Salary</th>
+                        <th>State</th>
+                        <th>City</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Emp of EmployeeDetails;let i=index;">
+                        <th>{{i+1}}</th>
+                       <td>{{Emp.name}}</td>
+                       <td>{{Emp.phone}}</td>
+                       <td>{{Emp.email}}</td>
+                       <td>{{Emp.gender}}</td>
+                       <td>{{Emp.dob}}</td>
+                       <td>{{Emp.doj}}</td>
+                       <td>{{Emp.department}}</td>
+                       <td>{{Emp.salary}}</td>
+                       <td>{{Emp.state}}</td>
+                       <td>{{Emp.city}}</td>
+                       <td>{{Emp.address}}</td>
+                       <td>
+                        <input type="button" value="Edit" class="btn btn-warning" (click)="getEmployeeById(Emp.id)">
+                         &nbsp;&nbsp;
+                        <input type="button" value="Delete" class="btn btn-danger" (click)="DeleteEmployee(Emp.id)">
+                       </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>
